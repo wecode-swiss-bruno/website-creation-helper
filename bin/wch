@@ -1,7 +1,27 @@
 #!/usr/bin/env php
 <?php
 
-require __DIR__.'/../vendor/autoload.php';
+// Find the correct autoloader
+$possibleFiles = [
+    __DIR__ . '/../../../autoload.php',
+    __DIR__ . '/../vendor/autoload.php',
+];
+
+$file = null;
+foreach ($possibleFiles as $possibleFile) {
+    if (file_exists($possibleFile)) {
+        $file = $possibleFile;
+        break;
+    }
+}
+
+if (null === $file) {
+    throw new RuntimeException('Unable to locate autoloader. Please run "composer install".');
+}
+
+require $file;
+
+// Your application code here
 
 use Symfony\Component\Console\Application;
 use Wecode\WebsiteCreationHelper\Commands\NewProjectCommand;
