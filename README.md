@@ -1,239 +1,176 @@
 # Website Creation Helper
 
-A PHP package to quickly scaffold new web projects with popular CSS frameworks and modern development tools.
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/geneva-wecode/website-creation-helper.svg?style=flat-square)](https://packagist.org/packages/geneva-wecode/website-creation-helper)
+[![Total Downloads](https://img.shields.io/packagist/dt/geneva-wecode/website-creation-helper.svg?style=flat-square)](https://packagist.org/packages/geneva-wecode/website-creation-helper)
 
-## 📋 Table of Contents
 
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Features](#features)
-- [Available Commands](#available-commands)
-- [Framework Support](#framework-support)
-- [Templates](#templates)
-- [Configuration](#configuration)
-- [Examples](#examples)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
+## 🌟 Introduction
 
-## 🚀 Installation
+[Website Creation Helper](https://wecode.swiss) is a powerful PHP package designed to streamline and accelerate your web development workflow. Built with modern development practices in mind, Website Creation Helper provides a robust foundation for creating professional websites using popular CSS frameworks and templating systems.
 
-!!!! USE ./bin/wch if you got an error with the wch command !!!!
+## 📦 Installation
 
-### Via Composer
+Get started with Website Creation Helper in seconds:
 
-\`\`\`bash
-composer require wecode/website-creation-helper
-\`\`\`
+```bash
+composer require geneva-wecode/website-creation-helper
+```
 
-### Requirements
+## 🚀 Usage
 
-- PHP 8.0 or higher
-- Node.js 14+ and npm/yarn
-- Composer 2.0+
+```bash
+wch new-project my-project
+```
 
-## ⚡ Quick Start
+```bash
+wch create-template my-template
+```
 
-\`\`\`bash
-# Create a new project with Bootstrap 5
-wch new my-project --framework=bootstrap --version=5.3
-
-# Create a project with Tailwind CSS
-wch new my-project-tailwind --framework=tailwind --version=3.0
-
-# Install all dependencies
-cd my-project
+```bash
 wch install
-\`\`\`
+```
 
-## 🎯 Features
+## Command options
 
-- **Project Scaffolding**
-  - Automated directory structure creation
-  - Configuration files setup
-  - Git initialization
-  - README generation
+```bash
+wch new-project my-project --framework=bootstrap
+```
+or
 
-- **Framework Integration**
-  - Bootstrap (v5.3, v4.6)
-  - Tailwind CSS (v3.0, v2.0)
-  - Foundation (v6.7)
-  - Bulma (v0.9)
+```bash
+wch new-project my-project --framework=tailwind
+```
 
-- **Template System**
-  - Twig templating engine
-  - Custom template support
-  - Component-based architecture
-  - Reusable layouts
+## Commands
+
+- `wch new-project my-project`
+- `wch create-template my-template`
+- `wch install`
+
+
+
+## 🎯 Why Choose Website Creation Helper?
+
+Website Creation Helper stands out from other website creation tools by offering:
+
+- **Rapid Development**: Get your website up and running in minutes, not hours
+- **Framework Flexibility**: Choose from popular frameworks like Bootstrap, Tailwind, Foundation, or Bulma
+- **Modern Architecture**: Built on PHP 8.0+ with best practices and modern development patterns
+- **Developer-First Approach**: Intuitive CLI commands and clear documentation
+- **Template System**: Powered by Twig for flexible and reusable templates
+
+## 🚀 What Website Creation Helper Does
+
+Website Creation Helper simplifies the website creation process by:
+
+1. **Project Scaffolding**
+   - Automatically creates organized directory structures
+   - Sets up configuration files
+   - Initializes Git repository
+   - Generates comprehensive README files
+
+2. **Framework Integration**
+   - Seamless integration with popular CSS frameworks
+   - Pre-configured settings for optimal performance
+   - Easy framework version management
+   - Built-in responsive design support
+
+3. **Development Tools**
+   - Live reload functionality
+   - Asset compilation and optimization
+   - Source map generation
+   - Development server included
+
+4. **Template Management**
+   - Custom template creation and management
+   - Component-based architecture
+   - Reusable layouts and partials
+   - Built-in template inheritance
+
+## 💡 Use Cases for Website Creation Helper
+
+Website Creation Helper is perfect for:
+
+- **Freelance Developers**: Quick project setup for client websites
+- **Agencies**: Standardized approach to website development
+- **Personal Projects**: Rapid prototyping and development
+- **Learning**: Great tool for understanding modern web development
+
+## 🛠️ Technical Features
+
+Website Creation Helper includes:
+
+- **Command Line Interface**
+  - Intuitive commands for all operations
+  - Interactive project setup
+  - Clear feedback and error handling
 
 - **Asset Management**
-  - CSS/SCSS compilation
+  - SCSS/SASS compilation
   - JavaScript bundling
   - Image optimization
   - Font management
 
-- **Development Tools**
-  - Live reload
-  - CSS preprocessing
-  - JS transpilation
-  - Source maps
+- **Development Environment**
+  - Local development server
+  - Hot reloading
+  - Debug tools
+  - Performance optimization
 
-## 🛠️ Available Commands
+## 🎨 Supported Frameworks
 
-### Project Creation
-\`\`\`bash
-# Basic project creation
-wch new project-name
+Website Creation Helper currently supports:
 
-# With specific framework
-wch new project-name --framework=bootstrap
+- **Bootstrap**
+  - Latest version (5.3)
+  - Legacy support (4.6)
+  - All components and utilities
+  - Custom theming
 
-# With framework version
-wch new project-name --framework=bootstrap --version=5.3
-\`\`\`
-
-### Template Management
-\`\`\`bash
-# Create new template
-wch template:create my-template
-
-# List available templates
-wch template:list
-
-# Export template
-wch template:export my-template
-\`\`\`
-
-### Asset Management
-\`\`\`bash
-# Install dependencies
-wch install
-
-# Build assets
-wch build
-
-# Watch for changes
-wch watch
-\`\`\`
-
-## 🎨 Framework Support
-
-### Bootstrap
-- Versions: 5.3, 4.6
-- Features:
-  - Grid system
-  - Components
-  - Utilities
-  - JavaScript plugins
-
-### Tailwind CSS
-- Versions: 3.0, 2.0
-- Features:
+- **Tailwind CSS**
   - JIT compilation
   - Custom configuration
-  - PurgeCSS integration
   - Plugin support
+  - Utility-first approach
 
-### Foundation
-- Version: 6.7
-- Features:
-  - XY Grid
+- **Foundation**
+  - Complete grid system
   - Motion UI
-  - Building blocks
   - Responsive design
+  - Building blocks
 
-### Bulma
-- Version: 0.9
-- Features:
-  - Flexbox based
+- **Bulma**
+  - Modern flexbox
   - Modular architecture
-  - No JavaScript dependencies
-  - Modern syntax
+  - Custom components
+  - Responsive helpers
 
-## 📝 Templates
+## 📈 Future of Website Creation Helper
 
-### Default Templates
-- `base.twig`: Basic HTML5 structure
-- `landing.twig`: Landing page template
-- `blog.twig`: Blog layout
-- `admin.twig`: Admin dashboard
+The Website Creation Helper roadmap includes:
 
-### Custom Templates
-\`\`\`bash
-# Template structure
-templates/
-├── custom/
-│   ├── my-template.twig
-│   └── components/
-├── layouts/
-└── partials/
-\`\`\`
+- Additional framework support
+- Enhanced template systems
+- Performance optimizations
+- Advanced customization options
+- Community template marketplace
 
-## ⚙️ Configuration
+## 🤝 Community and Support
 
-### Project Configuration
-\`\`\`yaml
-# config.yaml
-project:
-  name: "My Website"
-  framework: "bootstrap"
-  version: "5.3"
-  assets:
-    compile: true
-    minify: true
-    sourcemaps: true
-\`\`\`
+Website Creation Helper is backed by:
 
-### Framework Configuration
-\`\`\`php
-// frameworks.php
-return [
-    'css_frameworks' => [
-        'bootstrap' => [
-            'versions' => ['5.3', '4.6'],
-            'cdn' => 'https://cdn.jsdelivr.net/npm/bootstrap@{version}'
-        ],
-        // ... other frameworks
-    ]
-];
-\`\`\`
+- Active community support
+- Regular updates and improvements
+- Comprehensive documentation
+- Professional support options
 
-## 📚 Examples
+## 🔗 Resources
 
-### Basic Website
-\`\`\`bash
-wch new my-website
-cd my-website
-wch install
-wch serve
-\`\`\`
+- [Official Website](https://wecode.swiss)
+- [Documentation](https://wecode.swiss/docs)
+- [GitHub Repository](https://github.com/wecode-swiss-bruno/website-creation-helper)
+- [Issue Tracker](https://github.com/wecode-swiss-bruno/website-creation-helper/issues)
 
-### Custom Template Usage
-\`\`\`bash
-# Create template
-wch template:create blog-post
+## 📦 Installation
 
-# Use template
-wch generate:page about --template=blog-post
-\`\`\`
-
-## 🔧 Troubleshooting
-
-### Common Issues
-
-1. **npm not found**
-   \`\`\`bash
-   curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-   sudo apt-get install -y nodejs
-   \`\`\`
-
-2. **Permission Issues**
-   \`\`\`bash
-   sudo chown -R $USER:$USER .
-   \`\`\`
-
-3. **Framework Installation Failed**
-   - Check internet connection
-   - Verify npm registry access
-   - Clear npm cache: \`npm cache clean --force\`
-MIT License
+Get started with Website Creation Helper in seconds:
