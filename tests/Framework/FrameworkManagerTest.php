@@ -13,6 +13,7 @@ class FrameworkManagerTest extends TestCase
 
     protected function setUp(): void
     {
+        /** @var SymfonyStyle $io */
         $io = $this->createMock(SymfonyStyle::class);
         $this->manager = new FrameworkManager($io);
         $this->testDir = sys_get_temp_dir() . '/wch-test-' . uniqid();

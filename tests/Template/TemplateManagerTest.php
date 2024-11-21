@@ -13,6 +13,7 @@ class TemplateManagerTest extends TestCase
 
     protected function setUp(): void
     {
+        /** @var SymfonyStyle $io */
         $io = $this->createMock(SymfonyStyle::class);
         $this->manager = new TemplateManager($io);
         $this->testDir = sys_get_temp_dir() . '/wch-test-' . uniqid();
