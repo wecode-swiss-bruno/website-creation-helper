@@ -1,5 +1,5 @@
 {
-    "name": "wecode/website-creation-helper",
+    "name": "geneva-wecode/website-creation-helper",
     "description": "Modern website creation helper with Twig templates and popular CSS frameworks",
     "type": "library",
     "license": "MIT",
@@ -28,11 +28,6 @@
     "autoload": {
         "psr-4": {
             "Wecode\\WebsiteCreationHelper\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Wecode\\WebsiteCreationHelper\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "stable",
