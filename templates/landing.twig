@@ -1,0 +1,37 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-md-6">
+                <h1>{{ hero.title|default('Welcome to Our Website') }}</h1>
+                <p class="lead">{{ hero.subtitle|default('Discover amazing features and services') }}</p>
+                <a href="{{ hero.cta_link|default('#') }}" class="btn btn-primary btn-lg">
+                    {{ hero.cta_text|default('Get Started') }}
+                </a>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ hero.image|default('/assets/images/hero.jpg') }}" alt="Hero Image" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features py-5">
+        <div class="row">
+            {% for feature in features|default([]) %}
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>{{ feature.title }}</h3>
+                            <p>{{ feature.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock %} 
