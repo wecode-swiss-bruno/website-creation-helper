@@ -5,12 +5,12 @@
     "license": "MIT",
     "homepage": "https://wecode.swiss",
     "support": {
-        "issues": "https://github.com/wecodegeneva/website-creation-helper/issues",
-        "source": "https://github.com/wecodegeneva/website-creation-helper"
+        "issues": "https://github.com/wecode-swiss-bruno/website-creation-helper/issues",
+        "source": "https://github.com/wecode-swiss-bruno/website-creation-helper"
     },
     "authors": [
         {
-            "name": "WecodeGeneva",
+            "name": "Bruno Studer",
             "email": "bruno@wecode.swiss",
             "homepage": "https://wecode.swiss"
         }
