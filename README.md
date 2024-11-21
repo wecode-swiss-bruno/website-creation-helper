@@ -19,33 +19,32 @@ composer require geneva-wecode/website-creation-helper
 ## 🚀 Usage
 
 ```bash
-wch new-project my-project
+wch new my-project
 ```
 
-```bash
-wch create-template my-template
-```
-
-```bash
-wch install
-```
 
 ## Command options
 
 ```bash
-wch new-project my-project --framework=bootstrap
+wch new my-project --framework=bootstrap
 ```
 or
 
 ```bash
-wch new-project my-project --framework=tailwind
+wch new my-project --framework=tailwind
 ```
 
 ## Commands
 
-- `wch new-project my-project`
-- `wch create-template my-template`
-- `wch install`
+## Available commands:
+
+  completion       Dump the shell completion script
+  help             Display help for a command
+  install          Install frontend dependencies
+  list             List commands
+  new              Create a new project
+  template         Manage templates
+  template:create  Create a new custom template
 
 
 
